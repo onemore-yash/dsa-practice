@@ -1,31 +1,121 @@
 # DSA Practice — C++
 
-My Data Structures & Algorithms solutions while preparing for placements.
+My Data Structures & Algorithms solutions, written in C++ while preparing for software engineering placements.
 
-## 📂 Structure
+---
 
-- `arrays/` — Array problems
-- `strings/` — String problems
-- `graphs/` — Graph problems (BFS, DFS, etc.)
-- `dp/` — Dynamic Programming problems
-- `tries/` — Trie problems
+## 📌 About
 
-## 📊 Progress Tracker
+- **Language:** C++
+- **Platforms:** LeetCode, GeeksforGeeks, coding ninjas
+- **Goal:** Strengthen problem-solving skills for technical interviews
 
-| Topic | Status |
-|---|---|
-| Dynamic Programming | ✅ Done |
-| Graphs | 🟡 In Progress |
-| Tries | 🔴 Not Started |
-| Advanced (Segment Trees etc.) | 🔴 Not Started |
+---
+
+## 📂 Repository Structure
+
+```
+dsa-practice/
+├── arrays/
+├── strings/
+├── linked-list/
+├── stacks-queues/
+├── trees/
+├── graphs/
+├── dynamic-programming/
+├── tries/
+├── advanced/
+└── README.md
+```
+
+---
+
+## 📊 Progress Overview
+
+| Topic | Status | Problems Solved |
+|---|---|---|
+| Arrays |  |  |
+| Strings |  |  |
+| Linked List |  |  |
+| Stacks & Queues |  |  |
+| Trees |  |  |
+| Graphs |  |  |
+| Dynamic Programming |  |  |
+| Tries |  |  |
+| Advanced (Segment Tree, etc.) |  |  |
+| **Total** |  |  |
+
+> Status legend: ✅ Done | 🟡 In Progress | 🔴 Not Started
+
+---
 
 ## 🧠 Problems Solved
 
+### Arrays
+
+| # | Problem | Difficulty | Approach | Link |
+|---|---|---|---|---|
+| 1 |  |  |  |  |
+
+### Strings
+
+| # | Problem | Difficulty | Approach | Link |
+|---|---|---|---|---|
+| 1 |  |  |  |  |
+
+### Linked List
+
+| # | Problem | Difficulty | Approach | Link |
+|---|---|---|---|---|
+| 1 |  |  |  |  |
+
+### Stacks & Queues
+
+| # | Problem | Difficulty | Approach | Link |
+|---|---|---|---|---|
+| 1 |  |  |  |  |
+
+### Trees
+
+| # | Problem | Difficulty | Approach | Link |
+|---|---|---|---|---|
+| 1 |  |  |  |  |
+
 ### Graphs
 
-| Problem | Difficulty | Approach | Link |
-|---|---|---|---|
-| | | | |
+| # | Problem | Difficulty | Approach | Link |
+|---|---|---|---|---|
+| 1 |  |  |  |  |
+
+### Dynamic Programming
+
+| # | Problem | Difficulty | Approach | Link |
+|---|---|---|---|---|
+| 1 |  |  |  |  |
+
+### Tries
+
+| # | Problem | Difficulty | Approach | Link |
+|---|---|---|---|---|
+| 1 |  |  |  |  |
+
+### Advanced
+
+| # | Problem | Difficulty | Approach | Link |
+|---|---|---|---|---|
+| 1 |  |  |  |  |
 
 ---
-*Built while preparing for placements — B.Tech Mathematics & Computing, DAU*
+
+## 🛠️ Tech Stack
+
+- **Language:** C++17
+- **Compiler:** g++ / VS Code
+
+---
+
+## 👤 Author
+
+**Yash Patel**
+B.Tech Mathematics & Computing, Dhirubhai Ambani University (DAU)
+[GitHub](https://github.com/onemore-yash) • [LinkedIn](www.linkedin.com/in/yashkumbhani)
