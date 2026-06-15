@@ -96,16 +96,6 @@ dsa-practice/
 
 
 
-<img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/7c7fcc61-8d19-4e9c-86da-2e6e7853d76c" />
-
-
-
-<img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/cf168861-6c00-482a-82df-c3d39e139e4a" />
-
-
-
-<img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/dc6c1e92-3cdb-4979-99bc-afdaf32cb544" />
-
 
 ### Dynamic Programming
 
