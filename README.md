@@ -85,7 +85,12 @@ dsa-practice/
 
 | # | Problem | Difficulty | Approach | date | link |
 |---|---|---|---|---|---|
-| 1 | BFS Traversal of Graph | Medium | Visited array + queue, push adjacent unvisited nodes | 09-06-2026 | [Link](https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1) |
+| 1 | BFS Traversal of Graph | easy | Visited array + queue, push adjacent unvisited nodes | 09-06-2026 | [Link](https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1) |
+|2|	DFS	|easy |you have to make helper function and for any node you have to recursivly call helper for adjecent nodes and everytime store to res vector which we also pass with function	graph	| 09-06-2026	|[Link](https://www.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1) |
+
+
+<img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/dc6c1e92-3cdb-4979-99bc-afdaf32cb544" />
+
 
 ### Dynamic Programming
 
