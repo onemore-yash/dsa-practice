@@ -85,7 +85,7 @@ dsa-practice/
 
 | # | Problem | Difficulty | Approach | Link |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
+| 1 | BFS Traversal of Graph | Medium | Visited array + queue, push adjacent unvisited nodes | 09-06-2026 | [Link](https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1) |
 
 ### Dynamic Programming
 
