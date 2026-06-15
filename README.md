@@ -53,57 +53,57 @@ dsa-practice/
 
 ### Arrays
 
-| # | Problem | Difficulty | Approach | Link |
-|---|---|---|---|---|
-| 1 |  |  |  |  |
+| # | Problem | Difficulty | Approach | date | link |
+|---|---|---|---|---|---|
+| 1 |  |  |  |  | |
 
 ### Strings
 
-| # | Problem | Difficulty | Approach | Link |
-|---|---|---|---|---|
-| 1 |  |  |  |  |
+| # | Problem | Difficulty | Approach | date | link |
+|---|---|---|---|---|---|
+| 1 |  |  |  |  | |
 
 ### Linked List
 
-| # | Problem | Difficulty | Approach | Link |
-|---|---|---|---|---|
-| 1 |  |  |  |  |
+| # | Problem | Difficulty | Approach | date | link |
+|---|---|---|---|---|---|
+| 1 |  |  |  |  | |
 
 ### Stacks & Queues
 
-| # | Problem | Difficulty | Approach | Link |
-|---|---|---|---|---|
-| 1 |  |  |  |  |
+| # | Problem | Difficulty | Approach | date | link |
+|---|---|---|---|---|---|
+| 1 |  |  |  |  | |
 
 ### Trees
 
-| # | Problem | Difficulty | Approach | Link |
-|---|---|---|---|---|
-| 1 |  |  |  |  |
+| # | Problem | Difficulty | Approach | date | link |
+|---|---|---|---|---|---|
+| 1 |  |  |  |  | |
 
 ### Graphs
 
-| # | Problem | Difficulty | Approach | Link |
-|---|---|---|---|---|
-| 1 |  |  |  |  |
+| # | Problem | Difficulty | Approach | date | link |
+|---|---|---|---|---|---|
+| 1 | BFS Traversal of Graph | Medium | Visited array + queue, push adjacent unvisited nodes | 09-06-2026 | [Link](https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1) |
 
 ### Dynamic Programming
 
-| # | Problem | Difficulty | Approach | Link |
-|---|---|---|---|---|
-| 1 |  |  |  |  |
+| # | Problem | Difficulty | Approach | date | link |
+|---|---|---|---|---|---|
+| 1 |  |  |  |  | |
 
 ### Tries
 
-| # | Problem | Difficulty | Approach | Link |
-|---|---|---|---|---|
-| 1 |  |  |  |  |
+| # | Problem | Difficulty | Approach | date | link |
+|---|---|---|---|---|---|
+| 1 |  |  |  |  | |
 
 ### Advanced
 
-| # | Problem | Difficulty | Approach | Link |
-|---|---|---|---|---|
-| 1 |  |  |  |  |
+| # | Problem | Difficulty | Approach | date | link |
+|---|---|---|---|---|---|
+| 1 |  |  |  |  | |
 
 ---
 
