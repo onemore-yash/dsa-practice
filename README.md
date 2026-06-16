@@ -104,6 +104,7 @@ dsa-practice/
 |17|	Find eventual safe states|	medium|first you have to reverse the graph then apply topological sort	|Topological sort	|15-06-2026	|[Link](https://leetcode.com/problems/find-eventual-safe-states/description/)|
 |18|	Alien Dictionary|hard|	here from words you have to make adjacancy list and then simply do topoogical sort	|Topological sort	|15-06-2026|	[Link](https://www.geeksforgeeks.org/problems/alien-dictionary/1)|
 |19|	 print Shortest path in unweighted graph|medium|	"BFS + parent tracking → shortest distance guaranteed (level-by-level exploration) Path reconstruction: destination → trace parents → source → reverse"	|shortest path/BFS|	16-06-2026|	[Link](https://www.naukri.com/code360/problems/shortest-path-in-an-unweighted-graph_981297?leftPanelTabValue=PROBLEM)|
+|20|	Shortest path in DAG|hard|	here you have to first find stack using topological sort then one by one take element from stack and check distance with neighbours for that you have to define one distance array and initialize with 1e9 then every time if you found min diatance then change in distance array	|Topological sort+BFS|	16-06-2026|	[Link](https://www.naukri.com/code360/problems/shortest-path-in-dag_8381897?leftPanelTabValue=PROBLEM)|
 
 
 
