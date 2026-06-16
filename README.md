@@ -96,6 +96,9 @@ dsa-practice/
 |9|	Surrounded Regions|medium|	use simple BFS  but here you have start from zeros which are on the corners	|BFS|	11-06-2026	|[Link](https://leetcode.com/problems/surrounded-regions/description/)|
 |10|	Number of Enclaves|medium|	Use simple BFS but you have to minuse from total which can wrok off the Boundary|BFS|12-06-2026	|[Link](https://leetcode.com/problems/number-of-enclaves/description/)|
 |11|	Word ladder	|Hard|you have to do like bfs because each step you have word and you have to check all possibilities for each char from word and if match then push to queue and increase steps	|BFS|	12-06-2026	|[Link](https://leetcode.com/problems/word-ladder/description/)|
+|12|	Word ladder II|very hard|	"Multi-source BFS storing full paths in the queue (each queue element = path so far); process level-by-level, erasing used words only after a full level finishes (so same-level branches can share words) — stop once endWord is reached.
+Then DFS isn't needed: when word==endWord, push the whole path directly into ans if its length matches the first found path's length. but this will not worked in leetcode solution"	|BFS|	14-06-2026	|[Link](https://www.geeksforgeeks.org/problems/word-ladder-ii/1)|
+
 
 
 
