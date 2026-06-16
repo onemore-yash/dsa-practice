@@ -2,7 +2,7 @@
 // Link: https://www.geeksforgeeks.org/problems/word-ladder-ii/1
 // Approach: "Multi-source BFS storing full paths in the queue (each queue element = path so far); process level-by-level, erasing used words only after a full level finishes (so same-level branches can share words) — stop once endWord is reached.
 //            Then DFS isn't needed: when word==endWord, push the whole path directly into ans if its length matches the first found path's length. but this is not worked in leetcode solution"
-// Date Solved: 09-06-2026
+// Date Solved: 14-06-2026
 
 #include <bits/stdc++.h>
 using namespace std;
