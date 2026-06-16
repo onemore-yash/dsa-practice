@@ -103,6 +103,8 @@ dsa-practice/
 |16|	Topological sort/kahn's algo|medium|(1-topological sort)you have to use DFS but when you return every time you have to push that element in stack and at the end from stack push all element in to vector (2-kahn's algo)here you solve with BFS with some modification like you use indegree instead of visted array|Topological sort|15-06-2026|[Link](https://www.geeksforgeeks.org/problems/topological-sort/1)|
 |17|	Find eventual safe states|	medium|first you have to reverse the graph then apply topological sort	|Topological sort	|15-06-2026	|[Link](https://leetcode.com/problems/find-eventual-safe-states/description/)|
 |18|	Alien Dictionary|hard|	here from words you have to make adjacancy list and then simply do topoogical sort	|Topological sort	|15-06-2026|	[Link](https://www.geeksforgeeks.org/problems/alien-dictionary/1)|
+|19|	 print Shortest path in unweighted graph|medium|	"BFS + parent tracking → shortest distance guaranteed (level-by-level exploration) Path reconstruction: destination → trace parents → source → reverse"	|shortest path/BFS|	16-06-2026|	[Link](https://www.naukri.com/code360/problems/shortest-path-in-an-unweighted-graph_981297?leftPanelTabValue=PROBLEM)|
+
 
 
 
