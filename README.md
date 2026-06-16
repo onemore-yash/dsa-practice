@@ -100,8 +100,9 @@ dsa-practice/
 |13|	Number of islands|medium|	you have to do travers and do bfs parallel if a node is not visited then store it in queue and do bfs and for every unvisited you have to increase count	|BFS	|14-06-2026	|[Link](https://leetcode.com/problems/number-of-islands/)|
 |14|	Bipartite graph	|easy|use bfs for diconected graph and color child with other color than parents and every time check	|BFS|	14-06-2026|	[Link](https://leetcode.com/problems/is-graph-bipartite/description/)|
 |15|	Course schedule II	|medium|1)DFS each node for unvisited neighbors recurse if a neighbor is in current path (pathvis)  cycle found return {} After visiting all neighbors, push node to ans (post-order), then reverse ans at the end for correct topological order 2)use same code as topological sort and at the end just check if ans(size)==n then return reverse of ans otherwise return {}|	BFS|	14-06-2026|	[Link](https://leetcode.com/problems/course-schedule-ii/description/)|
-
-<img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/4d5c949c-8bf7-4dfc-badc-d8f1a8741b4e" />
+|16|	Topological sort/kahn's algo|medium|(1-topological sort)	you have to use DFS but when you return every time you have to push that element in stack and at the end from stack push all element in to vector (2-kahn's algo)here you solve with BFS with some modification like you use indegree instead of visted array
+	|Topological sort	|15-06-2026|	[Link](https://www.geeksforgeeks.org/problems/topological-sort/1)|
+  
 
 
 <img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/3781868b-79ac-4b58-a2bc-bd9053616b00" />
