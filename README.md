@@ -92,6 +92,9 @@ dsa-practice/
 |5|	Flood Fill|medium|	use simple BFS|	BFS	|10-06-2026	|[Link](https://leetcode.com/problems/flood-fill/description/)
 |6|	Undirected Graph cycle|medium|	use DFS and keep trake of parent as bool function	|DFS|	11-06-2026|	[Link](https://www.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1)|
 |7|	Course schedule(6 for directed)|medium|	here parent version is not work we have to define one more pathvis vector and every time at end we have to reset it	|DFS/Topological sort|	11-06-2026|[Link](https://leetcode.com/problems/course-schedule/description/)|
+|8|	01 matrix|medium|	same as Flood Fill but some condition change|	BFS|	11-06-2026|	[Lint](https://leetcode.com/problems/01-matrix/)|
+<img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/bea7bf17-cf05-4926-ba02-2de485c87018" />
+
 <img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/8512ea10-d3ab-4ad8-a1b9-c18a7bf27910" />
 
 ### Dynamic Programming
