@@ -98,10 +98,7 @@ dsa-practice/
 |11|	Word ladder	|Hard|you have to do like bfs because each step you have word and you have to check all possibilities for each char from word and if match then push to queue and increase steps	|BFS|	12-06-2026	|[Link](https://leetcode.com/problems/word-ladder/description/)|
 |12|	Word ladder II|very hard|Multi-source BFS storing full paths in the queue (each queue element = path so far); process level-by-level, erasing used words only after a full level finishes (so same-level branches can share words) — stop once endWord is reached Then DFS isn't needed: when word==endWord, push the whole path directly into ans if its length matches the first found path's length but this will not worked in leetcode solution	|BFS|	14-06-2026	|[Link](https://www.geeksforgeeks.org/problems/word-ladder-ii/1)|
 |13|	Number of islands|medium|	you have to do travers and do bfs parallel if a node is not visited then store it in queue and do bfs and for every unvisited you have to increase count	|BFS	|14-06-2026	|[Link](https://leetcode.com/problems/number-of-islands/)|
-
-
-
-
+|14|	Bipartite graph	|easy|use bfs for diconected graph and color child with other color than parents and every time check	|BFS|	14-06-2026|	[Link](https://leetcode.com/problems/is-graph-bipartite/description/)|
 
 <img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/3781868b-79ac-4b58-a2bc-bd9053616b00" />
 
