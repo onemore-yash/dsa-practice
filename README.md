@@ -91,7 +91,7 @@ dsa-practice/
 |4 |Rotting oranges|medium	|first count total oranges and which are rotten put their coordinates In queue then do bfs(level wise travel like) then make fresh to rotton and count rotton every time then at the end check if rotton==total then return count and else -1	|BFS|	10-06-2026	|[Link](https://leetcode.com/problems/rotting-oranges/)|
 |5|	Flood Fill|medium|	use simple BFS|	BFS	|10-06-2026	|[Link](https://leetcode.com/problems/flood-fill/description/)
 |6|	Undirected Graph cycle|medium|	use DFS and keep trake of parent as bool function	|DFS|	11-06-2026|	[Link](https://www.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1)|
-|7|	Course schedule(6 for directed)|medium|	here parent version is not work we have to define one more pathvis vector and every time at end we have to reset it	|DFS/Topological sort|	11-06-2026|[Link](https://leetcode.com/problems/course-schedule/description/)|
+|7|	Course schedule(6 for directed)|medium|	1)here parent version is not work we have to define one more pathvis vector and every time at end we have to reset it 2)here use same code as topological sort and at the end you only have to check if size of ans is equal to n or not	|DFS/Topological sort|	11-06-2026|[Link](https://leetcode.com/problems/course-schedule/description/)|
 |8|	01 matrix|medium|	use simple BFS with some condition change|	BFS|	11-06-2026|	[Lint](https://leetcode.com/problems/01-matrix/)|
 |9|	Surrounded Regions|medium|	use simple BFS  but here you have start from zeros which are on the corners	|BFS|	11-06-2026	|[Link](https://leetcode.com/problems/surrounded-regions/description/)|
 |10|	Number of Enclaves|medium|	Use simple BFS but you have to minuse from total which can wrok off the Boundary|BFS|12-06-2026	|[Link](https://leetcode.com/problems/number-of-enclaves/description/)|
@@ -99,6 +99,11 @@ dsa-practice/
 |12|	Word ladder II|very hard|Multi-source BFS storing full paths in the queue (each queue element = path so far); process level-by-level, erasing used words only after a full level finishes (so same-level branches can share words) — stop once endWord is reached Then DFS isn't needed: when word==endWord, push the whole path directly into ans if its length matches the first found path's length but this will not worked in leetcode solution	|BFS|	14-06-2026	|[Link](https://www.geeksforgeeks.org/problems/word-ladder-ii/1)|
 |13|	Number of islands|medium|	you have to do travers and do bfs parallel if a node is not visited then store it in queue and do bfs and for every unvisited you have to increase count	|BFS	|14-06-2026	|[Link](https://leetcode.com/problems/number-of-islands/)|
 |14|	Bipartite graph	|easy|use bfs for diconected graph and color child with other color than parents and every time check	|BFS|	14-06-2026|	[Link](https://leetcode.com/problems/is-graph-bipartite/description/)|
+|15|	Course schedule II	|medium|1)DFS each node; for unvisited neighbors recurse, if a neighbor is in current path (pathvis) → cycle found, return {}. After visiting all neighbors, push node to ans (post-order), then reverse ans at the end for correct topological order 2)use same code as topological sort and at the end just check if ans.size==n then return reverse of ans otherwise return {}
+|	BFS|	14-06-2026|	[Link](https://leetcode.com/problems/course-schedule-ii/description/)|
+
+<img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/4d5c949c-8bf7-4dfc-badc-d8f1a8741b4e" />
+
 
 <img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/3781868b-79ac-4b58-a2bc-bd9053616b00" />
 
