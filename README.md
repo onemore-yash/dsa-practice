@@ -91,16 +91,8 @@ dsa-practice/
 |4 |Rotting oranges|medium	|first count total oranges and which are rotten put their coordinates In queue then do bfs(level wise travel like) then make fresh to rotton and count rotton every time then at the end check if rotton==total then return count and else -1	|BFS|	10-06-2026	|[Link](https://leetcode.com/problems/rotting-oranges/)|
 |5|	Flood Fill|medium|	use simple BFS|	BFS	|10-06-2026	|[Link](https://leetcode.com/problems/flood-fill/description/)
 |6|	Undirected Graph cycle|medium|	use DFS and keep trake of parent as bool function	|DFS|	11-06-2026|	[Link](https://www.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1)|
-<img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/c6f79abc-9432-4f84-9b54-26a6cb5e377f" />
 |7|	Course schedule(6 for directed)|medium|	here parent version is not work we have to define one more pathvis vector and every time at end we have to reset it	|DFS/Topological sort|	11-06-2026|[Link](https://leetcode.com/problems/course-schedule/description/)|
 <img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/8512ea10-d3ab-4ad8-a1b9-c18a7bf27910" />
-
-
-
-<img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/3ec63a70-c4a1-41d5-81d4-8f891aee5900" />
-
-
-
 
 ### Dynamic Programming
 
