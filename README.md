@@ -108,7 +108,7 @@ dsa-practice/
 |21|Dijkstra's Algo|medium|1)Start by picking the closest node from your list and explore all its neighbors For each neighbor, if you find a shorter path than what you already know, update that neighbor's distance and add it to check later.Keep doing this until you've checked all reachable nodes, and you'll have the shortest distance from your starting point to everywhere else2) you can use queue in first but it will take nore time because it will take all unnecassary paths3)use set insted of pq because set will erase already existing path which has more distance|Shortest path|17-06-2026|[Link](https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1)|
 |22|Shortest Path in Binary Matrix|medium|you can use either use dijkstra algo or BFS in that explore all 8 direction|shortest path|17-06-2026|[Link](https://leetcode.com/problems/shortest-path-in-binary-matrix/description/)|
 |23|path with min effort|medium|you have to use dijkstra algo and for every neighbour you have to calculate effort and compare with curr node's effort and take minimum|Shortest path|17-06-2026|[Link](https://leetcode.com/problems/path-with-minimum-effort/description/)|
-
+|24|cheapest flights within k stops|medium|1)modify dijkstra algorithm: use queue to save logn time and check for k+1 which handal edge case 2)you can also use while loop for k+1 time and evey time you replace stat vector and store min|shortest path|17-06-2026|[Link](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|
 <img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/3781868b-79ac-4b58-a2bc-bd9053616b00" />
 
 
