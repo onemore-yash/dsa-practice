@@ -109,6 +109,8 @@ dsa-practice/
 |22|Shortest Path in Binary Matrix|medium|you can use either use dijkstra algo or BFS in that explore all 8 direction|shortest path|17-06-2026|[Link](https://leetcode.com/problems/shortest-path-in-binary-matrix/description/)|
 |23|path with min effort|medium|you have to use dijkstra algo and for every neighbour you have to calculate effort and compare with curr node's effort and take minimum|Shortest path|17-06-2026|[Link](https://leetcode.com/problems/path-with-minimum-effort/description/)|
 |24|cheapest flights within k stops|medium|1)modify dijkstra algorithm: use queue to save logn time and check for k+1 which handal edge case 2)you can also use while loop for k+1 time and evey time you replace stat vector and store min|shortest path|17-06-2026|[Link](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|
+|25|Network delay time|medium|use simple dijkstra algorithm|shortest path|17-06-2026|[Link](https://leetcode.com/problems/network-delay-time/)|
+
 <img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/3781868b-79ac-4b58-a2bc-bd9053616b00" />
 
 
