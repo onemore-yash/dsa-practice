@@ -110,7 +110,7 @@ dsa-practice/
 |23|path with min effort|medium|you have to use dijkstra algo and for every neighbour you have to calculate effort and compare with curr node's effort and take minimum|Shortest path|17-06-2026|[Link](https://leetcode.com/problems/path-with-minimum-effort/description/)|
 |24|cheapest flights within k stops|medium|1)modify dijkstra algorithm: use queue to save logn time and check for k+1 which handal edge case 2)you can also use while loop for k+1 time and evey time you replace stat vector and store min|shortest path|17-06-2026|[Link](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|
 |25|Network delay time|medium|use simple dijkstra algorithm|shortest path|17-06-2026|[Link](https://leetcode.com/problems/network-delay-time/)|
-
+|26|Number of ways to arrive destination|medium|Use Dijkstra's algorithm to find the shortest distance to every node while maintaining ways[i],the number of shortest paths to reach node i If a shorter path is found, update the distance and copy the number of ways; if another path with the same shortest distance is found, add its ways modulo 1e9+7|Shortest Path|17-06-2026|[Link](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/)|
 <img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/3781868b-79ac-4b58-a2bc-bd9053616b00" />
 
 
