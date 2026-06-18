@@ -113,7 +113,7 @@ dsa-practice/
 |26|Number of ways to arrive destination|medium|Use Dijkstra's algorithm to find the shortest distance to every node while maintaining ways[i],the number of shortest paths to reach node i If a shorter path is found, update the distance and copy the number of ways; if another path with the same shortest distance is found, add its ways modulo 1e9+7|Shortest Path|17-06-2026|[Link](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/)|
 |27|minimum multiplication to reach end|easy|you have to use dijkstra algo but with some modification like you have to use queue because elements already stored in increasing order also make 1000 size of dis array|Shortest path|18-06-2026|[Link](https://www.geeksforgeeks.org/problems/minimum-multiplications-to-reach-end/1)|
 |28|Bellman Ford Algo|medium|you have to relax edges V-1 time and if you want to find is there a negetive cycle then you have to relax one more time and check is distance decreasing then there is negative cycle|Shortest Path|18-06-2026|[Link]( https://www.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1)|
-
+|29|Floyd warshall|easy|it is like brut force you have to use adj matrix and modify you have to check for every node if they were a via node and take min|Shortest path|18-06-2026|[Link](https://www.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1)|
 
 ### Dynamic Programming
 
