@@ -112,7 +112,7 @@ dsa-practice/
 |25|Network delay time|medium|use simple dijkstra algorithm|shortest path|17-06-2026|[Link](https://leetcode.com/problems/network-delay-time/)|
 |26|Number of ways to arrive destination|medium|Use Dijkstra's algorithm to find the shortest distance to every node while maintaining ways[i],the number of shortest paths to reach node i If a shorter path is found, update the distance and copy the number of ways; if another path with the same shortest distance is found, add its ways modulo 1e9+7|Shortest Path|17-06-2026|[Link](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/)|
 <img width="32766" height="25" alt="image" src="https://github.com/user-attachments/assets/3781868b-79ac-4b58-a2bc-bd9053616b00" />
-
+|27|minimum multiplication to reach end|easy|you have to use dijkstra algo but with some modification like you have to use queue because elements already stored in increasing order also make 1000 size of dis array|Shortest path|18-06-2026|[Link](https://www.geeksforgeeks.org/problems/minimum-multiplications-to-reach-end/1)|
 
 
 ### Dynamic Programming
