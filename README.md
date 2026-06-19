@@ -117,7 +117,7 @@ dsa-practice/
 |30|Find the City With the Smallest Number of Neighbors at a Threshold Distance|medium|use floyd warshall algo to create that adj matrix and then travers and find node which satisfy condition and store index|Shortest PAth|18-06-2026|[Link](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/)|
 |31|Minimum Spanning Tree|medium|you have to use priority queue with vis array and start with any node and store weight,node and parent if you need edges at the end and every time you have to take top of pq and if already visited then continue otherwise sum+=w and put non visited neighbour in pq|MST|19-06-2026|[Link](https://www.geeksforgeeks.org/problems/minimum-spanning-tree/1)|
 |32|Disjoint Set|Hard| Each element initially belongs to its own set; find() returns the representative (ultimate parent) of a set using path compression union() merges two sets by connecting their representatives, preferably using rank or size to keep the tree shallow|Disjoint Set|19-06-2026|[Link](https://www.geeksforgeeks.org/problems/disjoint-set-union-find/1)|
-
+|33|Number of Operations to Make Network Connected|medium| here you need 2 things number of disjoint componant and number of extra edges you can find by Disjoint set if parent same then extraedge++ and at the end check parent array if parent[i]==i then cnt++ and if extra>=cnt-1 then cnt-1 otherwise -1|Disjoint Set|19-06-2026|[Link](https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/)|
 
 
 
