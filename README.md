@@ -118,7 +118,7 @@ dsa-practice/
 |31|Minimum Spanning Tree|medium|you have to use priority queue with vis array and start with any node and store weight,node and parent if you need edges at the end and every time you have to take top of pq and if already visited then continue otherwise sum+=w and put non visited neighbour in pq|MST|19-06-2026|[Link](https://www.geeksforgeeks.org/problems/minimum-spanning-tree/1)|
 |32|Disjoint Set|Hard| Each element initially belongs to its own set; find() returns the representative (ultimate parent) of a set using path compression union() merges two sets by connecting their representatives, preferably using rank or size to keep the tree shallow|Disjoint Set|19-06-2026|[Link](https://www.geeksforgeeks.org/problems/disjoint-set-union-find/1)|
 |33|Number of Operations to Make Network Connected|medium| here you need 2 things number of disjoint componant and number of extra edges you can find by Disjoint set if parent same then extraedge++ and at the end check parent array if parent[i]==i then cnt++ and if extra>=cnt-1 then cnt-1 otherwise -1|Disjoint Set|19-06-2026|[Link](https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/)|
-
+|34|Most Stones Removed with Same Row or Column|hard|you have to use row and col as nodes and make parent array of size maxrow+maxcol+1 and for every stone you have to join col to row and for that you have to use DJS and we just need nodes in DJS which are involv in having stone so we store r and c in unordered map as they will have stone and we just need to count them for ultimate parent|Disjoint Set|19-06-2026|[Link](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/description/)|
 
 
 
