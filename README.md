@@ -115,6 +115,7 @@ dsa-practice/
 |28|Bellman Ford Algo|medium|you have to relax edges V-1 time and if you want to find is there a negetive cycle then you have to relax one more time and check is distance decreasing then there is negative cycle|Shortest Path|18-06-2026|[Link]( https://www.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1)|
 |29|Floyd warshall|easy|it is like brut force you have to use adj matrix and modify you have to check for every node if they were a via node and take min|Shortest path|18-06-2026|[Link](https://www.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1)|
 |30|Find the City With the Smallest Number of Neighbors at a Threshold Distance|medium|use floyd warshall algo to create that adj matrix and then travers and find node which satisfy condition and store index|Shortest PAth|18-06-2026|[Link](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/)|
+|31|Minimum Spanning Tree|medium|you have to use priority queue with vis array and start with any node and store weight,node and parent if you need edges at the end and every time you have to take top of pq and if already visited then continue otherwise sum+=w and put non visited neighbour in pq|MST|19-06-2026|[Link](https://www.geeksforgeeks.org/problems/minimum-spanning-tree/1)|
 ### Dynamic Programming
 
 | # | Problem | Difficulty | Approach |pattern| date | link |
