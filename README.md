@@ -120,7 +120,7 @@ dsa-practice/
 |33|Number of Operations to Make Network Connected|medium| here you need 2 things number of disjoint componant and number of extra edges you can find by Disjoint set if parent same then extraedge++ and at the end check parent array if parent[i]==i then cnt++ and if extra>=cnt-1 then cnt-1 otherwise -1|Disjoint Set|19-06-2026|[Link](https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/)|
 |34|Most Stones Removed with Same Row or Column|hard|you have to use row and col as nodes and make parent array of size maxrow+maxcol+1 and for every stone you have to join col to row and for that you have to use DJS and we just need nodes in DJS which are involv in having stone so we store r and c in unordered map as they will have stone and we just need to count them for ultimate parent|Disjoint Set|19-06-2026|[Link](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/description/)|
 |35|Account Merge|hard|Use DSU to group account indices that share at least one common email by mapping each email to the first account where it appears and unioning subsequent accounts containing that email After forming the groups, collect all emails belonging to the same DSU parent, sort them, and prepend the account holder's name to construct the merged accounts|Disjoint Set|19-06-2026|[Link](https://leetcode.com/problems/accounts-merge/)|
-
+|36|Number of Island II|hard|Treat each newly added land cell as a separate island and increase the island count by 1 Check its 4 neighbors; if a neighbor is land and belongs to a different DSU component, union them and decrease the island count by 1|Disjoint Set|20-06-2026|[Link](https://www.geeksforgeeks.org/problems/number-of-islands/1)|
 
 
 ### Dynamic Programming
