@@ -122,6 +122,7 @@ dsa-practice/
 |35|Account Merge|hard|Use DSU to group account indices that share at least one common email by mapping each email to the first account where it appears and unioning subsequent accounts containing that email After forming the groups, collect all emails belonging to the same DSU parent, sort them, and prepend the account holder's name to construct the merged accounts|Disjoint Set|19-06-2026|[Link](https://leetcode.com/problems/accounts-merge/)|
 |36|Number of Island II|hard|Treat each newly added land cell as a separate island and increase the island count by 1 Check its 4 neighbors; if a neighbor is land and belongs to a different DSU component, union them and decrease the island count by 1|Disjoint Set|20-06-2026|[Link](https://www.geeksforgeeks.org/problems/number-of-islands/1)|
 |37|Makint a Large Island|hard|here first you have to do union of all element as if all element are node and after making union you have to check for all 0's what if we convert them to 1 for them you have to check size of neighbours if it is 1 and store size of their eletement parentin set(avoid repitation) and find maxi|Disjoint Set|20-06-2026|[Link](https://leetcode.com/problems/making-a-large-island/description/)|
+|38|Swim in rising water|medium|use Dijkstra algo and in priority queue store max weight from node and neighbours weight and row and colum and if you areach last position then return node's weight weight o/w -1|Shortest path|20-06-2026|[Link](https://leetcode.com/problems/swim-in-rising-water/)|
 
 
 ### Dynamic Programming
