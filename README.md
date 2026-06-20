@@ -123,7 +123,7 @@ dsa-practice/
 |36|Number of Island II|hard|Treat each newly added land cell as a separate island and increase the island count by 1 Check its 4 neighbors; if a neighbor is land and belongs to a different DSU component, union them and decrease the island count by 1|Disjoint Set|20-06-2026|[Link](https://www.geeksforgeeks.org/problems/number-of-islands/1)|
 |37|Makint a Large Island|hard|here first you have to do union of all element as if all element are node and after making union you have to check for all 0's what if we convert them to 1 for them you have to check size of neighbours if it is 1 and store size of their eletement parentin set(avoid repitation) and find maxi|Disjoint Set|20-06-2026|[Link](https://leetcode.com/problems/making-a-large-island/description/)|
 |38|Swim in rising water|medium|use Dijkstra algo and in priority queue store max weight from node and neighbours weight and row and colum and if you areach last position then return node's weight weight o/w -1|Shortest path|20-06-2026|[Link](https://leetcode.com/problems/swim-in-rising-water/)|
-
+|39|Bridges in Graph(Tarjan's Algo)|medium|here you have to do DFS with 2 state for each node explore time and lowest time and every time you ahve to ignore edge with parent and for every unvisited node you have to check if low>explore then it is a bridge|DFS|20-06-2026|[Link](https://leetcode.com/problems/critical-connections-in-a-network/description/)|
 
 ### Dynamic Programming
 
