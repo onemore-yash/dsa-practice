@@ -124,6 +124,7 @@ dsa-practice/
 |37|Makint a Large Island|hard|here first you have to do union of all element as if all element are node and after making union you have to check for all 0's what if we convert them to 1 for them you have to check size of neighbours if it is 1 and store size of their eletement parentin set(avoid repitation) and find maxi|Disjoint Set|20-06-2026|[Link](https://leetcode.com/problems/making-a-large-island/description/)|
 |38|Swim in rising water|medium|use Dijkstra algo and in priority queue store max weight from node and neighbours weight and row and colum and if you areach last position then return node's weight weight o/w -1|Shortest path|20-06-2026|[Link](https://leetcode.com/problems/swim-in-rising-water/)|
 |39|Bridges in Graph(Tarjan's Algo)|medium|here you have to do DFS with 2 state for each node explore time and lowest time and every time you ahve to ignore edge with parent and for every unvisited node you have to check if low>explore then it is a bridge|DFS|20-06-2026|[Link](https://leetcode.com/problems/critical-connections-in-a-network/description/)|
+|40|Articulation Point|medium|same logic as bridge in graph but some condition change here you have to change conditon to low[it]>=low[parent] and it should not be the start point for start point and every time you have to mark that one to avoid repetition you have to insert new condition you have to count children|DFS|21-06-2026|[Link](https://www.geeksforgeeks.org/problems/articulation-point-1/1)|
 
 ### Dynamic Programming
 
