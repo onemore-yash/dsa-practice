@@ -125,7 +125,7 @@ dsa-practice/
 |38|Swim in rising water|medium|use Dijkstra algo and in priority queue store max weight from node and neighbours weight and row and colum and if you areach last position then return node's weight weight o/w -1|Shortest path|20-06-2026|[Link](https://leetcode.com/problems/swim-in-rising-water/)|
 |39|Bridges in Graph(Tarjan's Algo)|medium|here you have to do DFS with 2 state for each node explore time and lowest time and every time you ahve to ignore edge with parent and for every unvisited node you have to check if low>explore then it is a bridge|DFS|20-06-2026|[Link](https://leetcode.com/problems/critical-connections-in-a-network/description/)|
 |40|Articulation Point|medium|same logic as bridge in graph but some condition change here you have to change conditon to low[it]>=low[parent] and it should not be the start point for start point and every time you have to mark that one to avoid repetition you have to insert new condition you have to count children|DFS|21-06-2026|[Link](https://www.geeksforgeeks.org/problems/articulation-point-1/1)|
-
+|41|Count Strongly Connected Componants(Kosaraju's Algo)|medium|if we perform a DFS on the graph and record the finishing times of nodes, then by reversing the graph and doing DFS in the order of decreasing finishing times, we can group nodes into SCCs|DFS|21-06-2026|[Link](https://www.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1)|
 ### Dynamic Programming
 
 | # | Problem | Difficulty | Approach |pattern| date | link |
