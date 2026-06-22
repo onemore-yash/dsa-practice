@@ -79,7 +79,8 @@ dsa-practice/
 
 | # | Problem | Difficulty | Approach | pattern|date | link |
 |---|---|---|---|---|---|---|
-| 1 |  |  |  |  | | |
+| 1 | Diameter of BT |easy  |  using postorder find left and right height and check max with diameter
+ |height|22-06-2026 |[Link](https://leetcode.com/problems/diameter-of-binary-tree/description/) |
 
 ### Graphs
 
