@@ -79,8 +79,8 @@ dsa-practice/
 
 | # | Problem | Difficulty | Approach | pattern|date | link |
 |---|---|---|---|---|---|---|
-| 1 | Diameter of BT |easy  |  using postorder find left and right height and check max with diameter|height|22-06-2026 |[Link](https://leetcode.com/problems/diameter-of-binary-tree/description/) |
-
+| 1 | Diameter of BT |easy  |  using postorder find left and right height and check max with diameter|height|27-02-2026 |[Link](https://leetcode.com/problems/diameter-of-binary-tree/description/) |
+|2|Balanced Binary Tree|easy|for every node check left and right height if diff>1 then return -1|height|27-02-2026|[Link](https://leetcode.com/problems/balanced-binary-tree/description/)|
 ### Graphs
 
 | # | Problem | Difficulty | Approach | pattern|date | link |
