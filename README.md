@@ -34,15 +34,15 @@ dsa-practice/
 
 | Topic | Status | Problems Solved |
 |---|---|---|
-| Arrays |  |  |
-| Strings |  |  |
-| Linked List |  |  |
-| Stacks & Queues |  |  |
-| Trees |  |  |
-| Graphs |  |  |
-| Dynamic Programming |  |  |
-| Tries |  |  |
-| Advanced (Segment Tree, etc.) |  |  |
+| Arrays | ✅  | 40 |
+| Strings | ✅  | 15 |
+| Linked List | ✅  | 31 |
+| Stacks & Queues |  🟡 |  |
+| Trees | ✅  | 49 |
+| Graphs | ✅  | 41 |
+| Dynamic Programming | ✅  | 54 |
+| Tries | 🔴 |  |
+| Advanced (Segment Tree, etc.) | 🔴 |  |
 | **Total** |  |  |
 
 > Status legend: ✅ Done | 🟡 In Progress | 🔴 Not Started
@@ -75,12 +75,136 @@ dsa-practice/
 |---|---|---|---|---|---|---|
 | 1 |  |  |  |  | | |
 
-### Trees
+## 🌳 Trees & BST
 
-| # | Problem | Difficulty | Approach | pattern|date | link |
+| # | Problem | Difficulty | Approach | Pattern | Date | Link |
 |---|---|---|---|---|---|---|
-| 1 | Diameter of BT |easy  |  using postorder find left and right height and check max with diameter|height|22-06-2026 |[Link](https://leetcode.com/problems/diameter-of-binary-tree/description/) |
+| 1 | Diameter in BT | Easy | using postorder find left and right height and check max with diameter | Tree dp(postorder dfs) | 27-02-2026 | [Link](https://leetcode.com/problems/diameter-of-binary-tree/description/) |
+| 2 | check Balanced BT | Easy | check left and right height if diff>1 then return -1 | Height +tree dp | 27-02-2026 | [Link](https://leetcode.com/problems/balanced-binary-tree/description/) |
+| 3 | Max depth in BT | Easy | find left and right height and return max of them+1 | Height Based Problems/basic bfs | 27-02-2026 | [Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) |
+| 4 | Check Subtree (is S is subtree of T) | Medium | for all node of T with root of S check identical | Tree Comparison +DFS | 27-02-2026 | [Link](https://www.geeksforgeeks.org/problems/check-if-subtree/1) |
+| 5 | check identical | Easy | check both are null then true one null and other is not then false and check value and left and r... | Tree Comparison (Recursive DFS) | 27-02-2026 | [Link](https://www.geeksforgeeks.org/problems/determine-if-two-trees-are-identical/1) |
+| 6 | max path sum | Hard | use dfs for left and right max height for every node and Update global max sum considering node a... | Tree DP (Global Maximum Path) | 03-03-2026 | [Link](https://leetcode.com/problems/binary-tree-maximum-path-sum/submissions/1936724378/) |
+| 7 | count single valued subtree | Medium | make bool function and check left right with root and update global count | Postorder DFS / Tree Property Check | 03-03-2026 | [Link](https://www.geeksforgeeks.org/problems/single-valued-subtree/1) |
+| 8 | Zig Zag Traversal | Medium | use level order with boolean | lavel order variation | 03-03-2026 | [Link](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) |
+| 9 | morrise traversal | Medium | If no left → visit → go right Else:     Find predecessor     If no thread → create thread → go le... | Traversal in BT in TC :O(n) with O(1) SC | Not noted | No link |
+| 10 | boundary Traversal | Medium | make functions of collect left right and leaves(use morris traversal) | lavel order variation | 03-03-2026 | [Link](https://www.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1) |
+| 11 | Top view | Medium | use bfs and map then is any node altready present in map than there is a node upeer than current ... | vertical + bfs +map | 06-03-2026 | No link |
+| 12 | Bottom view | Medium | same as top view but if curr is already presant in map than we update it | vertical + bfs +map | 06-03-2026 | No link |
+| 13 | right view | Easy | same as top view but do right then left | lavel order variation | 06-03-2026 | [Link](https://leetcode.com/problems/binary-tree-right-side-view/description/) |
+| 14 | left view | Easy | same as right view but left then right | lavel order variation | 06-03-2026 | No link |
+| 15 | check Symmetric | Easy | check mirror for root left and right | symmetric/recursive comparision | 06-03-2026 | [Link](https://leetcode.com/problems/symmetric-tree/description/) |
+| 16 | vertical order traversal | Hard | use bfs with map<int,map<int,multiset<int>>>  here use multiset because at any perticular point t... | lavel order variation | 06-03-2026 | [Link](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/description/?envType=problem-list-v2&envId=binary-tree) |
+| 17 | LCA of BT | Medium | check for left and right subtree if both exist then return root else if only left exist then left... | LCA type | 06-03-2026 | [Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/) |
+| 18 | Print root to node path | Medium | we use bool function to check it curr is target or left or right if yes then we keep that element... | DFS + backtracking | 06-03-2026 | No link |
+| 19 | maximum width of BT | Medium | use BFS and at every level find last and first index and every time check max | BFS+indexing | 06-03-2026 | [Link](https://leetcode.com/problems/maximum-width-of-binary-tree/submissions/1939897367/) |
+| 20 | check children sum property | Medium | we find children sum and compare with parent if sum greater than root then change root to child v... | DFS + recursion | 07-03-2026 | No link |
+| 21 | maximum sum leaf to root path | Medium | do dfs and maintain maxsum by check if curr node is leaf or not and call for left and right | backtracking/dfs+global max | 09-03-2026 | [Link](https://www.geeksforgeeks.org/problems/maximum-sum-leaf-to-root-path/1) |
+| 22 | Difference between sums of odd level and even level nodes of a Binary Tree | Easy | use level order with boolean and sum | lavel order variation | 09-03-2026 | [Link](https://www.geeksforgeeks.org/problems/odd-even-level-difference/1) |
+| 23 | all nodes distance k in binary tree | Medium | first we need to make a map structure which store parent nodes and after that do bfs traversal th... | bfs+convert to undirected like graph structure | 09-03-2026 | [Link](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/description/) |
+| 24 | count total nodes in complete BT | Medium | find left and right height by special functions and if they same simply return value othewise ret... | Height Based Problems | 09-03-2026 | [Link](https://leetcode.com/problems/count-complete-tree-nodes/description/) |
+| 25 | print ancestors of given node | Medium | make a bool function which check either it currently in right or left if one  of  them is true th... | LCA type/root to path type | 09-03-2026 | [Link](https://www.geeksforgeeks.org/problems/ancestors-in-binary-tree/1) |
+| 26 | construct BT from pre and in order | Medium | from pre order we find the root and we make map of inorder then make a function for build tree we... | construction of BT | 10-03-2026 | [Link](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/submissions/1943923613/) |
+| 27 | construct BT from post and in order | Medium | same as pre+in but here make root last of post and limits | construction of BT | 11-03-2026 | [Link](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/) |
+| 28 | Serialize and De-serialize BT | Hard | in serialization we have to make string so we are doing level order travesal and instead of null ... | construction of BT + level order traversal | 12-03-2026 | [Link](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/) |
+| 29 | Flatten BT to LL | Medium | first we check if no left then do nothig go right else find rightmost of left and attach original... | in place modification using morris traversal | 13-03-2026 | [Link](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/) |
+| 30 | time taken to burning a BT from any node | Hard | first we have to make reverse means parent mapping so by lavel order traversal we return address ... | graph+bfs | 13-03-2026 | No link |
+| 31 | max path sum between to leaves | Hard | here we make a recur function which return best path with root and in this function we find for l... | BT DP | 13-03-2026 | [Link](https://www.geeksforgeeks.org/problems/maximum-path-sum/1) |
+| 32 | k sum path | Medium | here for each node  visit node,update currsum,check valid path,add prefix sum,go left,go right,re... | prefix sum+hashmap | 13-03-2026 | [Link](https://www.geeksforgeeks.org/problems/k-sum-paths/1) |
+| 33 | number of turns in BT | Medium | we need to find LCA then count turns from lca to both a and b and also we need to put condition i... | LCA+path analysis | 13-03-2026 | [Link](https://www.geeksforgeeks.org/problems/number-of-turns-in-binary-tree/1) |
+| 34 | clone a BT | Medium | here each node have 3 pointers we need to make sure that left ,right is copied and random pointer... | hashmap mapping/ graph cloning | 14-03-2026 | [Link](https://www.geeksforgeeks.org/problems/clone-a-binary-tree/1) |
+| 35 | array to BST | Medium | we have to make a function which devide array into 2 parts and we make root to mid and further ca... | construct BST | 15-03-2026 | [Link](https://www.geeksforgeeks.org/problems/array-to-bst4443/1) |
+| 36 | kth largest in BST with O(1) space | Hard | use morrise traversal but in reverse order | morrise traverasl | 15-03-2026 | [Link](https://www.geeksforgeeks.org/problems/normal-bst-to-balanced-bst/1) |
+| 37 | balance a BST | Medium | from inorder traversal find sorted vector and then build BST | construct BST | 15-03-2026 | [Link](https://www.geeksforgeeks.org/problems/normal-bst-to-balanced-bst/1) |
+| 38 | insertion in BST | Medium | start from root chack every node one direction right or left by comparision and when you get NULL... | path traversal | 18-03-2026 | [Link](https://leetcode.com/problems/insert-into-a-binary-search-tree/) |
+| 39 | check BST or not | Medium | run morris traversal for inorder and for each node check curnode value is less than previoius or not | path traversal | 24-03-2026 | [Link](https://www.geeksforgeeks.org/problems/check-for-bst/1) |
+| 40 | delete node in BST | Medium | Search for the node using BST property (left if key smaller, right if bigger),When found → return... | path traversal | 24-03-2026 | [Link](https://leetcode.com/problems/delete-node-in-a-bst/submissions/1957728037/) |
+| 41 | LCA of BST | Easy | chack for node if both exist in same side then recursivly call for that side otherwise return root | path traversal | 27-03-2026 | [Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/) |
+| 42 | preorder to BST | Medium | use a globle variable for upper bound and then make root and after make left and right recursivly | construct BST | 27-03-2026 | [Link](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/) |
+| 43 | BST iterator | Medium | use stack in first we put all left of stack then every time we call next then we put all left of ... | construct BST | 28-03-2026 | [Link](https://leetcode.com/problems/binary-search-tree-iterator/) |
+| 44 | two sum in BST | Easy | use BST iterator for left and right element and chack like simple 2 sum | 2sum+BST | 30-03-2026 | [Link](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/description/) |
+| 45 | Correct BST with 2 node swap | Medium | just do inorder traversal but in unique way do some change at node(left->node->right) we check pr... | inorder traversal | 30-03-2026 | [Link](https://leetcode.com/problems/recover-binary-search-tree/description/) |
+| 46 | maximum sum BST in BT | Hard | we have to make a structure which carry isBST,sum,maxval and minval and then we have to do post o... | postorder + DP | 31-03-2026 | [Link](https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/description/) |
+| 47 | catalan numbers | Medium | 2nCn | one type of series | 31-03-2026 | [Link](https://www.geeksforgeeks.org/dsa/applications-of-catalan-numbers/) |
+| 48 | Unique BSTs | Medium | just use catalan numbers | BST+DP | 31-03-2026 | [Link](https://leetcode.com/problems/unique-binary-search-trees/description/?envType=problem-list-v2&envId=binary-tree) |
+| 49 | Sorted LL to BST | Medium | use inorder approch with globle currHead pointer | construct BST | 31-03-2026 | [Link](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/description/) |
 
+## 🔁 Backtracking 
+
+| # | Problem | Difficulty | Approach | Pattern | Date | Link |
+|---|---|---|---|---|---|---|
+| 1 | subset I | Medium | create new function for backtracking which just do backtrack with ith element and without | backtracking+take/not take | 04-04-2026 | [Link](https://leetcode.com/problems/subsets/description/) |
+| 2 | subset II | Medium | sort given array ,create new function for backtracking which just do backtrack with ith element a... | backtracking+take/not take | 04-04-2026 | [Link](https://leetcode.com/problems/subsets-ii/description/) |
+| 3 | fibonacci number | Easy | use golden ratio formula | Not noted | Not noted | No link |
+| 4 | permutaions | Medium | create new function for backtracking which just do backtrack swap each elements(for start to n ) ... | backtracking+permutaion(ordering) | 04-04-2026 | [Link](https://leetcode.com/problems/permutations/description/) |
+| 5 | Combination sum | Medium | same as before but here you have 2 choices either you take element then stay at same index oherwi... | backtracking+take/not take | 04-04-2026 | [Link](https://leetcode.com/problems/combination-sum/description/) |
+| 6 | Combination sum II | Medium | just combine logic of 52 and 49 | backtracking+for-loop | 05-04-2026 | [Link](https://leetcode.com/problems/combination-sum-ii/description/) |
+| 7 | palindrome partationing | Medium | At each index i, try all substrings s[i…j]; if the substring is a palindrome, include it in the c... | backtracking+partation | 05-04-2026 | [Link](https://leetcode.com/problems/palindrome-partitioning/description/) |
+| 8 | generate parantheses | Medium | if size of curr ==2n then add and ,  Add '(' if open < n  Add ')' if close < open | backtracking+need validation(constrain base)(pruning) | 05-04-2026 | [Link](https://leetcode.com/problems/generate-parentheses/description/) |
+| 9 | letter combination of phone number | Medium | first make a map which store char corresponding to each number then just every time append each e... | backtracking+for-loop | 05-04-2026 | [Link](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) |
+| 10 | Restore IP address | Medium | Try all possible substrings of length 1–3 and check if each is a valid IP segment. If valid, recu... | backtracking+partation | 05-04-2026 | [Link](https://leetcode.com/problems/restore-ip-addresses/description/) |
+| 11 | word search | Medium | we have to use dfs function at every node se iterate through all elements and check dfs function ... | backtracking+dfs+pruning | 06-04-2026 | [Link](https://leetcode.com/problems/word-search/description/) |
+| 12 | N-Queens | Hard | here we travel row by row and in each row we try to put 1 Queen so in each row we check diagonals... | backtracking+for-loop+pruning | 06-04-2026 | [Link](https://leetcode.com/problems/n-queens/) |
+| 13 | Combination sum III | Medium | Pick numbers from 1–9 in increasing order(either use for loop or use create a array of 1 to 9), k... | backtracking+for-loop+pruning | 06-04-2026 | [Link](https://leetcode.com/problems/combination-sum-iii/description/) |
+
+## 📐 Dynamic Programming
+
+| # | Problem | Difficulty | Approach | Pattern | Date | Link |
+|---|---|---|---|---|---|---|
+| 1 | Climbing stairs | Easy | use simple dp use a linear array to store sum value and every time check if cur is already comput... | dp+sum | 06-04-2026 | [Link](https://leetcode.com/problems/climbing-stairs/description/) |
+| 2 | min cost climbing stairs | Easy | use simple dp use a linear array to store value and every time check if cur is already computed i... | dp+min | 07-04-2026 | [Link](https://leetcode.com/problems/min-cost-climbing-stairs/description/) |
+| 3 | min cost climbing stairs(you can jump 1 to k(given)) | Medium | same logic but at each index  we need to find min by for loop | dp+min+for-loop | 07-04-2026 | No link |
+| 4 | House Robber | Medium | same logic but at each step we have two opetions either take or not take then we choose max from ... | dp+take/not-take | 07-04-2026 | [Link](https://leetcode.com/problems/house-robber/description/) |
+| 5 | House Robber II | Medium | here we have to divide it in 2 parts first exclude first and in second exclude last then solve sa... | dp+take/not-take in cycle | 08-04-2026 | [Link](https://leetcode.com/problems/house-robber-ii/description/) |
+| 6 | Ninja's Training | Medium | here we can make a 2D matrix where each row define days and colums tasks where last n+1th column ... | dp+2D | 08-04-2026 | [Link](https://www.naukri.com/code360/problems/ninja%E2%80%99s-training_3621003) |
+| 7 | unique paths | Medium | in 2D matrix put 1 in 0th row and column and then at every cell sum both previous diagonal elemen... | dp+2D | 09-04-2026 | [Link](https://leetcode.com/problems/unique-paths/description/) |
+| 8 | unique paths II | Medium | same as before but just when we see rock then put at that point and take care of all boundy contries | dp+2D | 09-04-2026 | [Link](https://leetcode.com/problems/unique-paths-ii/description/) |
+| 9 | minimum path sum | Medium | same as before but just insteade of sum do min | dp+2D+min | 09-04-2026 | [Link](https://leetcode.com/problems/minimum-path-sum/description/) |
+| 10 | Triangle | Medium | 1)you can make 2D temp array and every time you travel and compute from upper and upper left elem... | dp+2D | 09-04-2026 | [Link](https://leetcode.com/problems/triangle/description/) |
+| 11 | Cherry pickup II | Hard | you can Cache result of state (i, j1, j2) to avoid recomputation If already computed → return sto... | dp+3D | 09-04-2026 | [Link](https://leetcode.com/problems/cherry-pickup-ii/description/) |
+| 12 | subset sum equal to target | Medium | At each index, decide take or not take the element and recursively check if target k can be forme... | dp+sequence | 10-04-2026 | [Link](https://www.naukri.com/code360/problems/subset-sum-equal-to-k_1550954) |
+| 13 | partation equal subset sum | Medium | find you have to find sum of all num and check it is even or not if odd then return false otherwi... | dp+sequence | 10-04-2026 | [Link](https://leetcode.com/problems/partition-equal-subset-sum/description/) |
+| 14 | array partition with minimum difference | Medium | here dp is work only when all elements are either non negatives or when negativies then number of... | dp+sequence | 11-04-2026 | [Link](https://www.naukri.com/code360/problems/array-partition-with-minimum-difference_842494?leftPanelTabValue=PROBLEM) |
+| 15 | Count subset with sum K | Medium | use same approch as 72 but here every time we have to add all values of recursion and also note t... | dp+sequence | 11-04-2026 | [Link](https://www.naukri.com/code360/problems/number-of-subsets_3952532?resumeRedirection=true&leftPanelTabValue=PROBLEM) |
+| 16 | Count partition with given differnce | Medium | here you have to take care when nums>=0 and also when arr[i] are very large although it is same a... | dp+sequence | 11-04-2026 | [Link](https://www.naukri.com/code360/problems/partitions-with-given-difference_3751628?leftPanelTabValue=PROBLEM) |
+| 17 | Assign Cookies | Easy | just take 2 pointer apporch | greedy | 11-04-2026 | [Link](https://leetcode.com/problems/assign-cookies/description/) |
+| 18 | 0 1 knapsack | Medium | use take not take and you can optimize it to only one 1D array | dp+sequence | 12-04-2026 | [Link](https://www.naukri.com/code360/problems/0-1-knapsack_920542?leftPanelTabValue=PROBLEM) |
+| 19 | Coin Change | Medium | simply use take not take but when you use take then you should not move to next index because you... | dp+sequence | 12-04-2026 | [Link](https://leetcode.com/problems/coin-change/description/) |
+| 20 | Target Sum | Medium | make a formula of newtarget and simple use dp | dp+sequence | 13-04-2026 | [Link](https://leetcode.com/problems/target-sum/description/) |
+| 21 | Coin Change II | Medium | every time add to ways to find how many ways and also you can use knapsack logic | dp+sequence | 13-04-2026 | [Link](https://leetcode.com/problems/coin-change-ii/description/) |
+| 22 | unbounded Knapsack | Medium | here you can unlimited time choose same index so use common dp | dp+sequence | 13-04-2026 | [Link](https://www.naukri.com/code360/problems/unbounded-knapsack_1215029) |
+| 23 | rod cutting | Medium | here you can use previous logic but use here index as rope remaining size like we use weight prev... | dp+sequence | 13-04-2026 | [Link](https://www.naukri.com/code360/problems/rod-cutting-problem_800284?leftPanelTabValue=PROBLEM) |
+| 24 | Longest common subsequence | Medium | here you have to give index I to 1st and j to 2nd string and then write base case and comparision | dp on string(lcs type) | 31-05-2026 | [Link](https://www.naukri.com/code360/problems/longest-common-subsequence_624879?leftPanelTabValue=PROBLEM) |
+| 25 | print LCS | Medium | first make dp table then do backtrack and make answer | dp on string(lcs type) | 31-05-2026 | [Link](https://www.naukri.com/code360/problems/print-longest-common-subsequence_8416383?leftPanelTabValue=PROBLEM) |
+| 26 | Longest common substring | Medium | remove that 2 condition from subsequence and add one more variable maxi | dp on string(lcs type) | 01-06-2026 | [Link](https://www.naukri.com/code360/problems/longest-common-substring_1235207?leftPanelTabValue=PROBLEM) |
+| 27 | Longest common palindrom | Medium | same as LCS | dp on string(lcs type) | 01-06-2026 | [Link](https://leetcode.com/problems/longest-palindromic-subsequence/description/) |
+| 28 | min insertion to make string palindrom | Medium | use 87 to solve | dp on string(lcs type) | 01-06-2026 | [Link](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/description/) |
+| 29 | min insertion/deletion to convert A to B | Medium | use 85 and one formula | dp on string(lcs type) | 01-06-2026 | [Link](https://leetcode.com/problems/delete-operation-for-two-strings/description/) |
+| 30 | shortest common supersequence | Medium | use 86 | dp on string(lcs type) | 01-06-2026 | [Link](https://leetcode.com/problems/shortest-common-supersequence/description/) |
+| 31 | Distinct subsequences | Hard | use simple dp and take care of variable type | dp on string(string matching) | 01-06-2026 | [Link](https://leetcode.com/problems/distinct-subsequences/description/) |
+| 32 | Edit distance | Medium | use simple dp and take care conditions | dp on string(string matching) | 01-06-2026 | [Link](https://leetcode.com/problems/edit-distance/description/) |
+| 33 | wildcard matching | Hard | use simple dp but take care of base conditions | dp on string(string matching) | 01-06-2026 | [Link](https://leetcode.com/problems/wildcard-matching/) |
+| 34 | Best time to buy and sell stock I | Easy | use a mini pointer and run for loop | dp on stocks | 02-06-2026 | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/) |
+| 35 | Best time to buy and sell stock II | Medium | use simple dp where 2 index(index,buy) and take care of 4 ways(2 for buy and 2 for sell ) | dp on stocks | 02-06-2026 | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/) |
+| 36 | Best time to buy and sell stock III | Hard | use simple dp where 3 index(index,buy,cap) and take care of 4 ways(2 for buy and 2 for sell ) | dp on stocks | 02-06-2026 | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/) |
+| 37 | Best time to buy and sell stock IV | Hard | use simple dp where 3 index(index,buy,cap) and take care of 4 ways(2 for buy and 2 for sell ) but... | dp on stocks | 02-06-2026 | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description/) |
+| 38 | Best time to buy and sell stock with cooldown | Medium | same as 96 just little change | dp on stocks | 02-06-2026 | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/) |
+| 39 | Best time to buy and sell stock with transaction fee | Medium | same as 96 just minus fee when sell | dp on stocks | 02-06-2026 | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/) |
+| 40 | Longest increasing subsequence | Medium | use simple pick not pick dp | dp on LIS | 06-06-2026 | [Link](https://leetcode.com/problems/longest-increasing-subsequence/description/) |
+| 41 | print Longest increasing subsequence | Medium | use 101 and for print make a prev array which store prev index which element match | dp on LIS | 06-06-2026 | No link |
+| 42 | Longest increasing subsequence | Medium | use temp array and just add and replace and at the end return size of temp | dp on LIS | 06-06-2026 | [Link](https://leetcode.com/problems/longest-increasing-subsequence/description/) |
+| 43 | Largest divisible subset | Medium | use same as 101 but change one condition and sort the arr | dp on LIS | 06-06-2026 | [Link](https://leetcode.com/problems/largest-divisible-subset/) |
+| 44 | Longest string chain | Medium | same as 101 but just sort word array and change one condition | dp on LIS | 06-06-2026 | [Link](https://leetcode.com/problems/longest-string-chain/description/) |
+| 45 | Longest bitonic subsequence | Medium | you have to make 2 vector in 101 increase and decrease then find max from their sum | dp on LIS | 06-06-2026 | [Link](https://www.geeksforgeeks.org/problems/longest-bitonic-subsequence0824/1) |
+| 46 | number of LIS | Medium | make a count array and every time if curr element is less than 1+prev then simply inherete and if... | dp on LIS | 06-06-2026 | [Link](https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/) |
+| 47 | matrix chain multiplication | Hard | you have to take 3 pointer i=initial , j=end and k=i+1 to j and simply find all steps and then mi... | MCM dp | 06-06-2026 | [Link](https://www.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1) |
+| 48 | min cost to cut a stick | Hard | same as 108 just change little in condition | MCM dp | 06-06-2026 | [Link](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/) |
+| 49 | Brust balloons | Hard | same as 108 just change little in condition | MCM dp | 07-06-2026 | [Link](https://leetcode.com/problems/burst-balloons/description/) |
+| 50 | diff ways to evaluate a bool exp | Medium | dp[i][j][isTrue] stores the number of ways to parenthesize the substring exp[i...j] so that it ev... | MCM dp | 07-06-2026 | [Link](https://www.geeksforgeeks.org/problems/boolean-parenthesization5610/1) |
+| 51 | palindrome partationing II | Hard | run a loop from i to n every time and check if that partation make palindrom or not if yes then f... | partation dp | 07-06-2026 | [Link](https://leetcode.com/problems/palindrome-partitioning-ii/description/) |
+| 52 | partation array for max sum | Medium | same as 112 | partation dp | 07-06-2026 | [Link](https://leetcode.com/problems/partition-array-for-maximum-sum/) |
+| 53 | maximal ractangle | Hard | you have to use largest ractangle area code for each column you have to update temp array and cal... | dp on square | 07-06-2026 | [Link](https://leetcode.com/problems/maximal-rectangle/description/) |
+| 54 | count suquare submatrix with all 1's | Medium | make 2d matrix and for each 1's count number of square by him when it is digonal right down eleme... | dp on square | 07-06-2026 | [Link](https://leetcode.com/problems/count-square-submatrices-with-all-ones/description/) |
 ### Graphs
 
 | # | Problem | Difficulty | Approach | pattern|date | link |
@@ -126,11 +250,6 @@ dsa-practice/
 |39|Bridges in Graph(Tarjan's Algo)|medium|here you have to do DFS with 2 state for each node explore time and lowest time and every time you ahve to ignore edge with parent and for every unvisited node you have to check if low>explore then it is a bridge|DFS|20-06-2026|[Link](https://leetcode.com/problems/critical-connections-in-a-network/description/)|
 |40|Articulation Point|medium|same logic as bridge in graph but some condition change here you have to change conditon to low[it]>=low[parent] and it should not be the start point for start point and every time you have to mark that one to avoid repetition you have to insert new condition you have to count children|DFS|21-06-2026|[Link](https://www.geeksforgeeks.org/problems/articulation-point-1/1)|
 |41|Count Strongly Connected Componants(Kosaraju's Algo)|medium|if we perform a DFS on the graph and record the finishing times of nodes, then by reversing the graph and doing DFS in the order of decreasing finishing times, we can group nodes into SCCs|DFS|21-06-2026|[Link](https://www.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1)|
-### Dynamic Programming
-
-| # | Problem | Difficulty | Approach |pattern| date | link |
-|---|---|---|---|---|---|---|
-| 1 |  |  |  |  | | |
 
 ### Tries
 
