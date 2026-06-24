@@ -1,10 +1,14 @@
-// Problem: Balanced Binary Tree
-// Link: https://leetcode.com/problems/balanced-binary-tree/description/
-// Approach: check for every node left and right height if diff>1 then return -1
-// Date Solved: 23-06-2026
+// Problem: balance a BST
+// Pattern: construct BST
+// Link: https://www.geeksforgeeks.org/problems/normal-bst-to-balanced-bst/1
+// Date Solved: 15-03-2026
+// Approach:
+// from inorder traversal find sorted vector and then build BST
 
 #include <bits/stdc++.h>
 using namespace std;
+
+// TODO: Paste your solution code here (from LeetCode/GFG submission history)
 struct TreeNode
 {
     int val;

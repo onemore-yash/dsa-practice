@@ -1,10 +1,13 @@
-// Problem: Diameter of Binary Tree
+// Problem: Diameter in BT
+// Pattern: Tree dp(postorder dfs)
 // Link: https://leetcode.com/problems/diameter-of-binary-tree/description/
-// Approach: using postorder find left and right height and check max with diameter
-// Date Solved: 22-06-2026
+// Date Solved: 27-02-2026
+// Approach:
+// using postorder find left and right height and check max with diameter
 
 #include <bits/stdc++.h>
 using namespace std;
+
 struct TreeNode
 {
     int val;
@@ -14,6 +17,7 @@ struct TreeNode
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+
 class Solution
 {
     int height(TreeNode *root, int &diameter)
