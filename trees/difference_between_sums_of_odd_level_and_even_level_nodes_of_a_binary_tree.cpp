@@ -21,4 +21,34 @@ struct TreeNode
 class Solution
 {
 public:
+    /*You are required to complete this function*/
+    int getLevelDiff(TreeNode *root)
+    {
+        // Your code here
+        int ans = 0;
+        queue<TreeNode *> q;
+        q.push(root);
+        bool f = true;
+        while (!q.empty())
+        {
+            int n = q.size();
+            for (int i = 0; i < n; i++)
+            {
+                int x = q.front()->val;
+                TreeNode *y = q.front();
+                q.pop();
+                if (f)
+                    ans += x;
+                else
+                    ans -= x;
+
+                if (y->left)
+                    q.push(y->left);
+                if (y->right)
+                    q.push(y->right);
+            }
+            f = !f;
+        }
+        return ans;
+    }
 };

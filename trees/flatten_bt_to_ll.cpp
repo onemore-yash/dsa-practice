@@ -21,4 +21,28 @@ struct TreeNode
 class Solution
 {
 public:
+    void flatten(TreeNode *root)
+    {
+        if (!root)
+            return;
+
+        TreeNode *temp = root;
+        while (temp)
+        {
+            if (!temp->left)
+                temp = temp->right;
+            else
+            {
+                TreeNode *pre = temp->left;
+                while (pre->right)
+                    pre = pre->right;
+                TreeNode *righti = temp->right;
+                temp->right = temp->left;
+                pre->right = righti;
+                temp->left = NULL;
+                temp = temp->right;
+            }
+        }
+        return;
+    }
 };

@@ -8,17 +8,41 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// TODO: Paste your solution code here (from LeetCode/GFG submission history)
-struct TreeNode
+struct Node
 {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+    int data;
+    Node *left;
+    Node *right;
+    Node *random;
 };
+
 class Solution
 {
+    Node *cloneTreeHelper(Node *node, unordered_map<Node *, Node *> &cloneMap)
+    {
+        if (!node)
+            return NULL;
+        if (cloneMap.find(node) != cloneMap.end())
+        {
+            return cloneMap[node];
+        }
+        Node *newClone = new Node();
+        newClone->data = node->data;
+        cloneMap[node] = newClone;
+        newClone->left = cloneTreeHelper(node->left, cloneMap);
+        newClone->right = cloneTreeHelper(node->right, cloneMap);
+        newClone->random = cloneTreeHelper(node->random, cloneMap);
+
+        return newClone;
+    }
+
 public:
+    /* The function should clone the passed tree and return
+       root of the cloned tree */
+    Node *cloneTree(Node *root)
+    {
+        // Your code here
+        unordered_map<Node *, Node *> cloneMap;
+        return cloneTreeHelper(root, cloneMap);
+    }
 };

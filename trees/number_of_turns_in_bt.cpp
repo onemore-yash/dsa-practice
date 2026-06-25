@@ -20,5 +20,82 @@ struct TreeNode
 };
 class Solution
 {
+
+    TreeNode *LCA(TreeNode *root, int a, int b)
+    {
+        if (!root || root->val == a || root->val == b)
+            return root;
+
+        TreeNode *left = LCA(root->left, a, b);
+        TreeNode *right = LCA(root->right, a, b);
+
+        if (left && right)
+            return root;
+
+        return left ? left : right;
+    }
+
+    int dfs(TreeNode *root, int target, int dir, int &turns)
+    {
+        if (!root)
+            return -1;
+        if (root->val == target)
+            return 0;
+
+        int left = dfs(root->left, target, 0, turns);
+        int right = dfs(root->right, target, 1, turns);
+
+        if (left != -1)
+        {
+            if (dir == 1)
+                turns++;
+            return left + 1;
+        }
+        if (right != -1)
+        {
+            if (dir == 0)
+                turns++;
+            return right + 1;
+        }
+
+        return -1;
+    }
+
 public:
+    // function should return the number of turns required to go from first node to
+    // second node
+    int NumberOFTurns(struct TreeNode *root, int a, int b)
+    {
+        // Your code goes here
+        TreeNode *lca = LCA(root, a, b);
+
+        int turns = 0;
+
+        if (lca->val == a)
+        {
+            dfs(lca->left, b, 0, turns);
+            dfs(lca->right, b, 1, turns);
+        }
+
+        else if (lca->val == b)
+        {
+            dfs(lca->left, a, 0, turns);
+            dfs(lca->right, a, 1, turns);
+        }
+
+        else
+        {
+            turns = 1;
+            dfs(lca->left, a, 0, turns);
+            dfs(lca->right, a, 1, turns);
+
+            dfs(lca->left, b, 0, turns);
+            dfs(lca->right, b, 1, turns);
+        }
+
+        if (turns == 0)
+            return -1;
+
+        return turns;
+    }
 };

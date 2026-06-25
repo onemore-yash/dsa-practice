@@ -20,5 +20,35 @@ struct TreeNode
 };
 class Solution
 {
+
+    int countpathutils(TreeNode *root, int k, int currsum, unordered_map<int, int> &presums)
+    {
+        if (!root)
+            return 0;
+        int pathcount = 0;
+        currsum += root->val;
+
+        if (currsum == k)
+            pathcount++;
+
+        pathcount += presums[currsum - k];
+
+        presums[currsum]++;
+
+        pathcount += countpathutils(root->left, k, currsum, presums);
+        pathcount += countpathutils(root->right, k, currsum, presums);
+
+        presums[currsum]--;
+
+        return pathcount;
+    }
+
 public:
+    int countAllPaths(TreeNode *root, int k)
+    {
+        // code here
+        unordered_map<int, int> presums;
+
+        return countpathutils(root, k, 0, presums);
+    }
 };

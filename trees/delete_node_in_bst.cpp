@@ -20,5 +20,39 @@ struct TreeNode
 };
 class Solution
 {
+
+    TreeNode *findlastchild(TreeNode *root)
+    {
+        if (!root->right)
+            return root;
+        return findlastchild(root->right);
+    }
+
 public:
+    TreeNode *deleteNode(TreeNode *root, int key)
+    {
+        if (!root)
+            return NULL;
+        if (root->val == key)
+        {
+            if (!root->right && !root->left)
+                return NULL;
+
+            if (!root->left)
+                return root->right;
+            if (!root->right)
+                return root->left;
+
+            TreeNode *pred = findlastchild(root->left);
+            root->val = pred->val;
+            root->left = deleteNode(root->left, pred->val);
+        }
+        else if (root->val > key)
+        {
+            root->left = deleteNode(root->left, key);
+        }
+        else
+            root->right = deleteNode(root->right, key);
+        return root;
+    }
 };

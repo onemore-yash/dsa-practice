@@ -20,5 +20,26 @@ struct TreeNode
 };
 class Solution
 {
+    long long Combination(int n, int r)
+    {
+        if (n - r < r)
+        {
+            r = n - r;
+        }
+        long long res = 1;
+        for (int i = 0; i < r; i++)
+        {
+            res *= (n - i);
+            res /= (i + 1);
+        }
+        return res;
+    }
+
 public:
+    int numTrees(int n)
+    {
+        long long x = Combination(2 * n, n);
+
+        return x / (n + 1);
+    }
 };

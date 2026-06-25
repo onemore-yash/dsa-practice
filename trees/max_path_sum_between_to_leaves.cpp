@@ -20,5 +20,30 @@ struct TreeNode
 };
 class Solution
 {
+    int dfs(TreeNode *root, int &maxii)
+    {
+        if (!root)
+            return 0;
+
+        int lefti = dfs(root->left, maxii);
+        int righti = dfs(root->right, maxii);
+
+        if (root->left != NULL && root->right != NULL)
+        {
+            maxii = max(maxii, root->val + lefti + righti);
+            return root->val + max(lefti, righti);
+        }
+        return root->val + (root->left == NULL ? righti : lefti);
+    }
+
 public:
+    int maxPathSum(TreeNode *root)
+    {
+        // code here
+        int maxii = INT_MIN;
+        int val = dfs(root, maxii);
+        if (root->right && root->left)
+            return maxii;
+        return max(maxii, val);
+    }
 };

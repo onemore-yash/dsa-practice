@@ -21,4 +21,34 @@ struct TreeNode
 class Solution
 {
 public:
+    TreeNode *insertIntoBST(TreeNode *root, int val)
+    {
+        if (!root)
+            return new TreeNode(val);
+        TreeNode *temp = root;
+        while (true)
+        {
+            if (temp->val <= val)
+            {
+                if (temp->right)
+                    temp = temp->right;
+                else
+                {
+                    temp->right = new TreeNode(val);
+                    return root;
+                }
+            }
+            else
+            {
+                if (temp->left)
+                    temp = temp->left;
+                else
+                {
+                    temp->left = new TreeNode(val);
+                    return root;
+                }
+            }
+        }
+        return root;
+    }
 };

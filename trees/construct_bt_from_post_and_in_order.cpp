@@ -20,5 +20,31 @@ struct TreeNode
 };
 class Solution
 {
+    TreeNode *build(vector<int> &inorder, int instart, int inend, vector<int> &postorder, int postart, int poend, map<int, int> &inmap)
+    {
+        if (instart > inend || postart > poend)
+            return NULL;
+
+        TreeNode *root = new TreeNode(postorder[poend]);
+
+        int inroot = inmap[root->val];
+        int numsleft = inroot - instart;
+
+        root->left = build(inorder, instart, inroot - 1, postorder, postart, postart + numsleft - 1, inmap);
+        root->right = build(inorder, inroot + 1, inend, postorder, postart + numsleft, poend - 1, inmap);
+
+        return root;
+    }
+
 public:
+    TreeNode *buildTree(vector<int> &inorder, vector<int> &postorder)
+    {
+        map<int, int> inmap;
+        for (int i = 0; i < inorder.size(); i++)
+        {
+            inmap[inorder[i]] = i;
+        }
+
+        return build(inorder, 0, inorder.size() - 1, postorder, 0, postorder.size() - 1, inmap);
+    }
 };

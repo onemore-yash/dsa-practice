@@ -21,4 +21,44 @@ struct TreeNode
 class Solution
 {
 public:
+    bool isBST(TreeNode *root)
+    {
+        // code here
+        TreeNode *cur = root;
+        TreeNode *pre = NULL;
+        int prevalue = INT_MIN;
+        while (cur)
+        {
+            if (!cur->left)
+            {
+                if (cur->val <= prevalue)
+                    return false;
+                prevalue = cur->val;
+                cur = cur->right;
+            }
+            else
+            {
+                pre = cur->left;
+                while (pre->right && pre->right != cur)
+                {
+                    pre = pre->right;
+                }
+                if (!pre->right)
+                {
+                    pre->right = cur;
+                    cur = cur->left;
+                }
+                else
+                {
+                    pre->right = NULL;
+                    if (cur->val <= prevalue)
+                        return false;
+
+                    prevalue = cur->val;
+                    cur = cur->right;
+                }
+            }
+        }
+        return true;
+    }
 };

@@ -18,3 +18,44 @@ struct TreeNode
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+class Solution
+{
+    vector<int> inorder(TreeNode *root)
+    {
+        vector<int> ans;
+        if (!root)
+            return ans;
+        stack<TreeNode *> st;
+        st.push(root);
+        while (!st.empty())
+        {
+            TreeNode *t = st.top();
+            st.pop();
+            ans.push_back(t->val);
+            if (t->left)
+                st.push(t->left);
+            if (t->right)
+                st.push(t->right);
+        }
+        return ans;
+    }
+    TreeNode *sortedArrayToBSTRecur(vector<int> &arr, int start, int end)
+    {
+        if (start > end)
+            return nullptr;
+
+        int mid = start + (end - start) / 2;
+        TreeNode *root = new TreeNode(arr[mid]);
+        root->left = sortedArrayToBSTRecur(arr, start, mid - 1);
+        root->right = sortedArrayToBSTRecur(arr, mid + 1, end);
+        return root;
+    }
+
+public:
+    TreeNode *balanceBST(TreeNode *root)
+    {
+        // Code here
+        vector<int> inorderr = inorder(root);
+        return sortedArrayToBSTRecur(inorderr, 0, inorderr.size() - 1);
+    }
+};
