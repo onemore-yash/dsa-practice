@@ -8,9 +8,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// TODO: Paste your solution code here (from LeetCode/GFG submission history)
+int unboundedKnapsack(int n, int w, vector<int> &profit, vector<int> &weight)
+{
+    vector<int> dp(w + 1, 0);
 
-class Solution {
-public:
-
-};
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = weight[i]; j <= w; j++)
+        {
+            dp[j] = max(dp[j], profit[i] + dp[j - weight[i]]);
+        }
+    }
+    return dp[w];
+}

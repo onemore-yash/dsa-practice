@@ -10,7 +10,41 @@ using namespace std;
 
 // TODO: Paste your solution code here (from LeetCode/GFG submission history)
 
-class Solution {
-public:
+int mod = 1e9 + 7;
+int findways(vector<int> &arr, int k)
+{
+    int n = arr.size();
+    vector<int> prev(k + 1, 0), curr(k + 1, 0);
 
-};
+    if (arr[0] == 0)
+        prev[0] = 2;
+    else
+        prev[0] = 1;
+
+    if (arr[0] != 0 && arr[0] <= k)
+        prev[arr[0]] = 1;
+
+    for (int i = 1; i < n; i++)
+    {
+        for (int sum = 0; sum <= k; sum++)
+        {
+            int notTake = prev[sum];
+            int Take = 0;
+            if (arr[i] <= sum)
+                Take = prev[sum - arr[i]];
+
+            curr[sum] = (Take + notTake) % mod;
+        }
+        prev = curr;
+    }
+    return curr[k];
+}
+int countPartitions(int n, int d, vector<int> &arr)
+{
+    int tsum = 0;
+    for (int x : arr)
+        tsum += x;
+    if ((tsum - d) < 0 || (tsum - d) % 2)
+        return 0;
+    return findways(arr, (tsum - d) / 2);
+}

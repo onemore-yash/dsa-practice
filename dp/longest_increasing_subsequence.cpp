@@ -8,9 +8,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// TODO: Paste your solution code here (from LeetCode/GFG submission history)
-
-class Solution {
+class Solution
+{
 public:
-
+    int lengthOfLIS(vector<int> &arr)
+    {
+        int n = arr.size();
+        vector<int> dp(n, 1);
+        int maxi = 1;
+        for (int i = 0; i < n; i++)
+        {
+            for (int p = 0; p < i; p++)
+            {
+                if (arr[i] > arr[p])
+                {
+                    dp[i] = max(dp[i], 1 + dp[p]);
+                }
+            }
+            maxi = max(maxi, dp[i]);
+        }
+        return maxi;
+    }
 };

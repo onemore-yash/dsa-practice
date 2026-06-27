@@ -9,9 +9,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// TODO: Paste your solution code here (from LeetCode/GFG submission history)
+bool subsetSumToK(int n, int k, vector<int> &arr)
+{
+    vector<bool> dp(k + 1, false);
+    dp[0] = true;
+    if (arr[0] <= k)
+        dp[arr[0]] = true;
 
-class Solution {
-public:
+    for (int i = 1; i < n; i++)
+    {
+        vector<bool> curr(k + 1, false);
+        curr[0] = true;
 
-};
+        for (int j = 0; j <= k; j++)
+        {
+            bool nottake = dp[j];
+            bool take = false;
+            if (arr[i] <= j)
+            {
+                take = dp[j - arr[i]];
+            }
+            curr[j] = take | nottake;
+        }
+        dp = curr;
+    }
+    return dp[k];
+}

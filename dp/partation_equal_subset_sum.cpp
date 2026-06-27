@@ -10,7 +10,30 @@ using namespace std;
 
 // TODO: Paste your solution code here (from LeetCode/GFG submission history)
 
-class Solution {
+class Solution
+{
 public:
+    bool canPartition(vector<int> &nums)
+    {
+        if (nums.empty())
+            return false;
+        int sum = 0;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            sum += nums[i];
+        }
+        if (sum % 2 != 0)
+            return false;
 
+        vector<bool> dp(sum / 2 + 1, false);
+        dp[0] = true;
+        for (int i : nums)
+        {
+            for (int target = sum / 2; target >= i; target--)
+            {
+                dp[target] = dp[target] || dp[target - i];
+            }
+        }
+        return dp[sum / 2];
+    }
 };

@@ -10,7 +10,22 @@ using namespace std;
 
 // TODO: Paste your solution code here (from LeetCode/GFG submission history)
 
-class Solution {
-public:
+class Solution
+{
+    int solve(int n, vector<int> &dp)
+    {
+        if (n == 0 || n == 1)
+            return 1;
 
+        if (dp[n] != -1)
+            return dp[n];
+        return dp[n] = solve(n - 1, dp) + solve(n - 2, dp);
+    }
+
+public:
+    int climbStairs(int n)
+    {
+        vector<int> dp(n + 1, -1);
+        return solve(n, dp);
+    }
 };

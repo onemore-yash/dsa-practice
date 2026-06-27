@@ -8,9 +8,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// TODO: Paste your solution code here (from LeetCode/GFG submission history)
+const int MOD = 1e9 + 7;
+int findWays(vector<int> &arr, int k)
+{
+    int n = arr.size();
+    vector<long long> dp(k + 1, 0);
+    dp[0] = 1;
+    if (arr[0] <= k)
+        dp[arr[0]] += 1;
+    for (int i = 1; i < arr.size(); i++)
+    {
+        vector<long long> curr(k + 1, 0);
+        curr[0] = 1;
+        for (int j = 0; j <= k; j++)
+        {
+            int nottake = dp[j];
+            int take = 0;
+            if (arr[i] <= j)
+                take = dp[j - arr[i]];
 
-class Solution {
-public:
+            curr[j] = (take + nottake) % MOD;
+        }
+        dp = curr;
+    }
 
-};
+    return dp[k];
+}

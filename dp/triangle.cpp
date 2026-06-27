@@ -10,7 +10,27 @@ using namespace std;
 
 // TODO: Paste your solution code here (from LeetCode/GFG submission history)
 
-class Solution {
+class Solution
+{
 public:
+    int minimumTotal(vector<vector<int>> &triangle)
+    {
+        int n = triangle.size();
 
+        vector<int> prev = triangle[n - 1];
+
+        for (int i = n - 2; i >= 0; i--)
+        {
+            vector<int> temp(i + 1);
+            for (int j = i; j >= 0; j--)
+            {
+                int d = prev[j] + triangle[i][j];
+                int dg = prev[j + 1] + triangle[i][j];
+
+                temp[j] = min(d, dg);
+            }
+            prev = temp;
+        }
+        return prev[0];
+    }
 };

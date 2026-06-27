@@ -10,9 +10,44 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// TODO: Paste your solution code here (from LeetCode/GFG submission history)
-
-class Solution {
+class Solution
+{
 public:
+    int countWays(string &s)
+    {
+        int n = s.size();
+        vector<vector<vector<int>>> dp(n, vector<vector<int>>(n, vector<int>(2)));
 
+        for (int i = n - 1; i >= 0; i -= 2)
+        {
+            for (int j = i; j < n; j += 2)
+            {
+                if (i == j)
+                {
+                    dp[i][j][true] = s[i] == 'T';
+                    dp[i][j][false] = s[i] == 'F';
+                    continue;
+                }
+                for (int k = i + 1; k < j; k += 2)
+                {
+                    int lt = dp[i][k - 1][true],
+                        lf = dp[i][k - 1][false],
+                        rt = dp[k + 1][j][true],
+                        rf = dp[k + 1][j][false];
+
+                    if (s[k] == '&')
+                        dp[i][j][true] += lt * rt,
+                            dp[i][j][false] += lf * rf + lt * rf + lf * rt;
+                    else if (s[k] == '|')
+                        dp[i][j][true] += lt * rt + lt * rf + lf * rt,
+                            dp[i][j][false] += lf * rf;
+                    else if (s[k] == '^')
+                        dp[i][j][true] += lt * rf + lf * rt,
+                            dp[i][j][false] += lf * rf + lt * rt;
+                }
+            }
+        }
+
+        return dp[0][n - 1][true];
+    }
 };

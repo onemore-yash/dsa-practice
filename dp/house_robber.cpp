@@ -10,7 +10,23 @@ using namespace std;
 
 // TODO: Paste your solution code here (from LeetCode/GFG submission history)
 
-class Solution {
+class Solution
+{
 public:
+    int rob(vector<int> &nums)
+    {
+        int prev = nums[0];
+        int prev2 = 0;
 
+        for (int i = 1; i < nums.size(); i++)
+        {
+            int include = prev2 + nums[i];
+            int exclude = prev;
+
+            int cur = max(include, exclude);
+            prev2 = prev;
+            prev = cur;
+        }
+        return max(prev2, prev);
+    }
 };
