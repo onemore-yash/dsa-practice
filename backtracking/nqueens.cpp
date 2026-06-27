@@ -10,7 +10,46 @@ using namespace std;
 
 // TODO: Paste your solution code here (from LeetCode/GFG submission history)
 
-class Solution {
+class Solution
+{
 public:
+    vector<vector<string>> solveNQueens(int n)
+    {
+        vector<vector<string>> ans;
+        vector<string> temp(n, string(n, '.'));
+        solve(n, ans, 0, temp);
+        return ans;
+    }
+    void solve(int n, vector<vector<string>> &ans, int row, vector<string> &temp)
+    {
+        if (row == n)
+        {
+            ans.push_back(temp);
+            return;
+        }
+        for (int i = 0; i < n; i++)
+        {
+            if (safe(row, i, temp, n))
+            {
+                temp[row][i] = 'Q';
+                solve(n, ans, row + 1, temp);
+                temp[row][i] = '.';
+            }
+        }
+    }
+    bool safe(int row, int col, vector<string> &temp, int n)
+    {
+        for (int i = 0; i < row; i++)
+            if (temp[i][col] == 'Q')
+                return false;
+        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--)
+            if (temp[i][j] == 'Q')
+                return false;
 
+        for (int i = row - 1, j = col + 1; i >= 0 && j < n; i--, j++)
+            if (temp[i][j] == 'Q')
+                return false;
+
+        return true;
+    }
 };

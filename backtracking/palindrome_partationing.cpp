@@ -10,7 +10,43 @@ using namespace std;
 
 // TODO: Paste your solution code here (from LeetCode/GFG submission history)
 
-class Solution {
+class Solution
+{
 public:
+    vector<vector<string>> partition(string s)
+    {
+        vector<vector<string>> res;
+        vector<string> subset;
+        backtrack(s, res, subset, 0);
 
+        return res;
+    }
+    bool checkPalindrome(string &s, int l, int r)
+    {
+        while (l < r)
+        {
+            if (s[l] != s[r])
+                return false;
+            l++;
+            r--;
+        }
+        return true;
+    }
+    void backtrack(string &s, vector<vector<string>> &res, vector<string> &subset, int i)
+    {
+        if (i == s.length())
+        {
+            res.push_back(subset);
+            return;
+        }
+        for (int j = i; j < s.length(); j++)
+        {
+            if (checkPalindrome(s, i, j))
+            {
+                subset.push_back(s.substr(i, j - i + 1));
+                backtrack(s, res, subset, j + 1);
+                subset.pop_back();
+            }
+        }
+    }
 };

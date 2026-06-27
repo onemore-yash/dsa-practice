@@ -10,7 +10,33 @@ using namespace std;
 
 // TODO: Paste your solution code here (from LeetCode/GFG submission history)
 
-class Solution {
+class Solution
+{
 public:
+    vector<vector<int>> subsetsWithDup(vector<int> &nums)
+    {
+        vector<vector<int>> res;
+        vector<int> subset;
+        sort(nums.begin(), nums.end());
+        backtrack(nums, 0, res, subset);
+        return res;
+    }
 
+private:
+    void backtrack(vector<int> &nums, int i, vector<vector<int>> &res, vector<int> &subset)
+    {
+        if (i == nums.size())
+        {
+            res.push_back(subset);
+            return;
+        }
+        subset.push_back(nums[i]);
+        backtrack(nums, i + 1, res, subset);
+        subset.pop_back();
+
+        while (i + 1 < nums.size() && nums[i] == nums[i + 1])
+            i++;
+
+        backtrack(nums, i + 1, res, subset);
+    }
 };
