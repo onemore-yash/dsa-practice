@@ -1,17 +1,12 @@
-// Problem: Implement Tries
-// Pattern: Impliment Tries
-// Link: https://leetcode.com/problems/implement-trie-prefix-tree/description/
-// Date Solved: 27-06-2026
-// Approach:
-// you have to make node structure in then define one links array of size 26 and flag some function like countkeys,put,isend,get,setend
-// 1)insert:in this for every char you have to check link exist not then use put and move and at then end set true
-// 2)search:check containskey for every char and at the end if we reach true then return true o/w false
-// 3)start with:same as search but last condition removed
+// Problem: Longest valid word with all prefix
+// Pattern: Tries
+// Link: https://www.geeksforgeeks.org/problems/longest-valid-word-with-all-prefixes/1
+// Date Solved: 28-06-2026
+// Approach:use trie and for every word you have to check is all prefix present of not and from all words you have to choose max lan
 
 #include <bits/stdc++.h>
 using namespace std;
 
-// Node Structure for Trie
 struct Node
 {
     Node *links[26] = {nullptr};
@@ -110,5 +105,48 @@ public:
             node = node->get(ch);
         }
         return true;
+    }
+    bool checkprefix(string word)
+    {
+        Node *node = root;
+
+        for (char ch : word)
+        {
+            if (!node->containsKey(ch))
+                return false;
+
+            node = node->get(ch);
+
+            if (!node->isEnd())
+                return false;
+        }
+
+        return true;
+    }
+};
+
+class Solution
+{
+public:
+    Trie trie;
+    string longestValidWord(vector<string> &words)
+    {
+        for (auto &it : words)
+            trie.insert(it);
+
+        string longest = "";
+        for (auto &it : words)
+        {
+            if (trie.checkprefix(it))
+            {
+                if (it.length() > longest.length())
+                {
+                    longest = it;
+                }
+                else if (it.length() == longest.length() && it < longest)
+                    longest = it;
+            }
+        }
+        return longest;
     }
 };
