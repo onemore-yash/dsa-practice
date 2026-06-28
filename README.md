@@ -256,6 +256,7 @@ dsa-practice/
 | # | Problem | Difficulty | Approach | pattern|date | link |
 |---|---|---|---|---|---|---|
 | 1 |Implement Tries  | medium |  you have to make node structure in then define one links array of size 26 and flag some function like countkeys,put,isend,get,setend1)insert:in this for every char you have to check link exist not then use put and move and at then end set true2)search:check containskey for every char and at the end if we reach true then return true o/w false3)start with:same as search but last condition removed | Tries | 27-06-2026|[Link](https://leetcode.com/problems/implement-trie-prefix-tree/description/) |
+|2|Implement Tries II|medium|same as first but here 2 new variable you need prefix and end and when you add then increase and when delete then decrease|Tries|28-06-2026|[Link](https://www.naukri.com/code360/problems/-implement-trie-ll_1387095)|
 
 ### Advanced
 
