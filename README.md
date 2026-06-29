@@ -260,6 +260,7 @@ dsa-practice/
 |3|Longest valid word with all prefixes|medium|use trie and for every word you have to check is all prefix present of not and from all words you have to choose max lan|Tries|28-06-2026|[Link](https://www.geeksforgeeks.org/problems/longest-valid-word-with-all-prefixes/1)|
 |4|Count of distinct substring|medium|just need node structure and you have to go through all possiblities and is that char is not present you have to increase cnt|Tries|29-06-2026|[Link](https://www.geeksforgeeks.org/problems/count-of-distinct-substrings/1)|
 |5|Max XOR of two num in an arr|medium|in tries you need 2 function insert in which you insert 32 bits in left to right and 2nd function is getmax in that you check from left to right if opposite bit present then you go there o/w you go to next bitand return max|Tries|29-06-2026|[Link](https://www.geeksforgeeks.org/problems/maximum-xor-of-two-numbers-in-an-array/1)|
+|6|Max XOR with an ele from arr|hard|Sort arr Sort queries by mi ind = 0 for each query (in increasing mi): while(ind < n && arr[ind] <= mi) insert arr[ind] into Trieind++ answer = maximum XOR with xi store at original index|Tries|29-06-2026|[Link](https://leetcode.com/problems/maximum-xor-with-an-element-from-array/description/)|
 
 ### Advanced
 
