@@ -258,6 +258,8 @@ dsa-practice/
 | 1 |Implement Tries  | medium |  you have to make node structure in then define one links array of size 26 and flag some function like countkeys,put,isend,get,setend1)insert:in this for every char you have to check link exist not then use put and move and at then end set true2)search:check containskey for every char and at the end if we reach true then return true o/w false3)start with:same as search but last condition removed | Tries | 27-06-2026|[Link](https://leetcode.com/problems/implement-trie-prefix-tree/description/) |
 |2|Implement Tries II|medium|same as first but here 2 new variable you need prefix and end and when you add then increase and when delete then decrease|Tries|28-06-2026|[Link](https://www.naukri.com/code360/problems/-implement-trie-ll_1387095)|
 |3|Longest valid word with all prefixes|medium|use trie and for every word you have to check is all prefix present of not and from all words you have to choose max lan|Tries|28-06-2026|[Link](https://www.geeksforgeeks.org/problems/longest-valid-word-with-all-prefixes/1)|
+|4|Count of distinct substring|medium|just need node structure and you have to go through all possiblities and is that char is not present you have to increase cnt|Tries|29-06-2026|[Link](https://www.geeksforgeeks.org/problems/count-of-distinct-substrings/1)|
+|5|Max XOR of two num in an arr|medium|in tries you need 2 function insert in which you insert 32 bits in left to right and 2nd function is getmax in that you check from left to right if opposite bit present then you go there o/w you go to next bitand return max|Tries|29-06-2026|[Link](https://www.geeksforgeeks.org/problems/maximum-xor-of-two-numbers-in-an-array/1)|
 
 ### Advanced
 
